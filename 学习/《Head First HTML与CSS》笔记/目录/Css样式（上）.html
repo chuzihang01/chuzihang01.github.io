@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Css样式</title>
+</head>
+<body>
+    <h2>一、Css简介</h2>
+    <ol>
+        <li>CSS是Cascading Style Sheets（层叠样式表单）的简称。更多的人把它称作样式表。顾名思义，它是一种设计网页样式的工具。其主要的用途是定义网页数据的编排、显示、格式化及特殊效果，以克服HTML方式的缺陷，</li>
+        <li>CSS是用来扩展HTML的，而不是用来替代HTML的。也就是CSS离不开HTML，他只是一项辅助工具。</li>
+    </ol>
+    <ol>
+        <li><mark>在HTML文件的<head>标记符内嵌入----嵌入样式表   (嵌入)</mark></li>
+    </ol>
+    这种方式利用&lt;style&gt;标记将样式表嵌入HTML文件的<br>
+        头信息标识符&lt;head&gt;里：<br>
+        &lt;head&gt;<br>
+        &lt;style type=”text/css”&gt;<br>
+        &lt;!--<br>
+        样式表的具体内容<br>
+        --&gt;<br>
+        &lt;/style&gt;<br>
+        &lt;/head&gt;<br>
+        type=”text/css”表示样式表采用MIME类型，帮助不支持CSS的浏览器过滤掉CSS代码，避免在浏览器面前直接以源代码的方式显示我们设置的样式表。但为了保证上述情况一定不要发生，还是有必要在样式表里加上注释标识符“&lt;!--注释内容--&gt;”。<br>
+        <ol>
+            <li>CSS基本语法：<br>
+                selector{property:value;property2:value2….} <br>
+            </li>
+            <li>包含最基本的两部分<br>
+                a.选择符(selector)<br>
+                b.声明：大括号里面的都是声明<br>
+            </li>
+        </ol>
+        <p>分析CSS   (css样式的基本书写格式)</p>
+        selector{ font-family:”宋体”；font-style:italic}
+        <ol>
+            <li>选择符即样式名称</li>
+            <li>用大括号包围样式格式</li>
+            <li>样式属性</li>
+            <li>用冒号表明属性和属性值的关系</li>
+            <li>样式属性值</li>
+        </ol>
+        <p>例子：</p>
+        body{color:yellow;font-size:20px} <br>
+        <ol>
+            <li>选择符：body</li>
+            <li>声明：由两部分组成：<br>
+                <ol>
+                    <li>属性：本例：color</li>
+                    <li>值： 本例：yellow</li>
+                </ol>
+            </li>
+        </ol>
+        <p>选择符：</p>
+        在css中，共有如下几种selector类别
+        <ol>
+            <li>HTML标记符</li>
+            <li>用户定义的类class</li>
+            <li>用户定义的id</li>
+            <li>虚类：<br>
+                HTMl标记符:最典型的selector类型<br>
+                例：<br>
+                H1{text-align:right;color:red}<br>
+                其中H1为标记符<br>
+            </li>
+        </ol>
+        <p>组合：</p>
+        <ol>
+            <li>可以把具有相同声明定义的选择符组合在一起，并用逗号隔开。<br>
+                例：<br>
+                h1,h2,h3{color:yellow}<br>
+            </li>
+            <li>同理，声明也可以组合在一起，它们之间用分号隔开<br>
+                例：<br>
+                h1{color:yellow;font-size:10}<br>
+            </li>
+            <li>用户定义的类class选择符：<br>
+                可以使用类来为单一HTML标记符创建多个样式，也就是允许同一个元素有不同样式,用“.”做标记。<br>
+                . mystyle{property:value}<br><br>
+                例：&lt;p class=“mystyle”&gt;一段文字&lt;/p&gt;<br>
+                注：如果希望对选中的文本，而不是整个段落应用自定义的样式，则需要使用带有class的&lt;span&gt;标记<br>
+                &lt;p&gt; 一段&lt;span class=“mystyle”&gt;文字&lt;/span&gt;&lt;/p&gt;<br>
+            </li>
+            <li>Id选择符
+                <ol>
+                    <li>id选择符也和class的作用是一样的</li>
+                    <li>id选择符个别地定义每个元素的成分，这种选择符应该尽量少用，它具有一定的局限性.</li>
+                    <li>一个id选择符的指定要有指示符“＃”在名字前面（区别于class的“.”号）。<br>
+                        例：<br>
+                        # aa {color:red}<br>
+                    </li>
+                </ol>
+            </li>
+            <li>虚类
+                <ol>
+                    <li>虚类也可以叫伪类</li>
+                    <li>它可以指定Ａ元素以不同的方式显示链接<br>
+                        例1：<br>
+                        : link {color:gray}<br>
+                        : visited {color:red} <br>
+                        : hover{color:yellow}<br>
+                        : active {color:green}<br><br><br>
+                        例：放在&lt;head&gt;中<br>
+                        &lt;style type="text/css"&gt;<br>
+                        &lt;!--<br>
+                        a:link {<br>
+                          　color: #666666;<br>
+                          　text-decoration: none;}<br>
+                        a:hover {<br>
+                          　color: #FF0000;<br>
+                          　text-decoration: underline;}<br>
+                        --&gt;<br>
+                        &lt;/style&gt;<br>
+                        其中&lt;-- --&gt;是注释，目的是若碰到不支持样式的浏览器时也不会产生错误信息
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>注：</p>
+        a.利用&lt;style&gt;…&lt;/style&gt;标记符在HTML文档的&lt;head&gt;标记符内定义，<br>
+        b.这种方法中，css与HTML文档要放在同一文档中。<br>
+        c.在指定的值前后通常加上双引号，例如：color:”green”,如果值是英文字母、数字时，双引号可以省略。<br>
+        <p><mark>2 在HTML文档中加入样式定义---内联样式  (局部引用)</mark></p>
+        <p>这种方式是HTML标记中应用样式定义，由于样式是在标记内部使用，所以称做“内联样式”</p>
+        方法：将标记的style属性值赋为所定义的样式规则。<br>
+        例：&lt;p style=”color: blue; font-size: 10pt”&gt;CSS实例</p><br>
+        代码说明：<br>
+        用蓝色显示字体大小为10pt的“CSS实例”。尽管使用简单、显示直观，但是这种方法不怎么常用，因为这样添加无法完全发挥样式表的优势“内容结构和格式控制分别保存”<br>
+        <ol>
+            <li>这种方法适用于指定网页内的某一小段文字的显示风格。</li>
+            <li>如果字里行间的css样式与&lt;head&gt;内在定义的css或外在连结的css相冲突，浏览器的显示将以行间的css为主
+                <ol>
+                    <li>文本框是黑色的,字体是白色的</li>
+                    <li>口令框背景是灰色的</li>
+                    <li>单选框和复选按钮的背景是红色的</li>
+                    <li>下拉框选择的是丰富多彩的背景</li>
+                    <li>多行文本框的背景是一个图象</li>
+                    <li>按钮的背景是有颜色的</li>
+                    <li>按钮的背景是一个图象</li>
+                </ol>
+            </li>
+        </ol>
+        <p><mark>3使用&lt;link&gt;标记符链接到外部的样式表单----链接样式表   (链接)</mark></p>
+        同样是添加在HTML的头信息标识符&lt;head&gt;里：<br>
+        &lt;head&gt;<br>
+        &lt;link rel=”stylesheet” href=”*.css” type=”text/css” media=”screen”&gt;<br>
+        &lt;/head&gt;<br>
+        <ol>
+            <li>Rel属性表示样式表将以何种方式与HTML文档结合。取值范围：<br>
+                ·Stylesheet：指定一个外部的样式表<br>
+                ·Alternate stylesheet：指定使用一个交互样式表<br>
+            </li>
+            <li>*.css是单独保存的样式表文件，其中不能包含&lt;style&gt;标识符，并且只能以css为后缀。</li>
+            <li>Media是可选的属性，表示使用样式表的网页将用什么媒体输出。取值范围：
+                <ul>
+                    <li>Screen（默认）：输出到电脑屏幕</li>
+                    <li>Print：输出到打印机</li>
+                    <li>TV：输出到电视机</li>
+                    <li>Projection：输出到投影仪</li>
+                    <li>Aural：输出到扬声器</li>
+                    <li>Braille：输出到凸字触觉感知设备</li>
+                    <li>Tty：输出到电传打字机</li>
+                    <li>All：输出到以上所有设备</li>
+                </ul>
+            </li>
+            如果要输出到多种媒体，可以用逗号分隔取值表。<br>
+        </ol>
+        注：<br>
+        <ol>
+            <li>如果一个样式要应用一个或少数个网页，可以用上面的方法，但是如果有数个，就要用链接了</li>
+            <li>&lt;link&gt;标记符可使我们定义保存一个单独的文档中，然后链接到文档中。</li>
+            <li>这种方法最方便管理整个网站的网页风貌。</li>
+        </ol>
+        <p>这种方式分为两步：</p>
+        <ol>
+            <li>建立一个*.css文件</li>
+            <li>在使用该样式的HTML文档中导入css文件。</li>
+        </ol>
+        <p>例：</p>
+        <ol>
+            <li>建一个css文件<br>
+                body {background-color:red;}<br>
+            </li>
+            <li>在你想要应用这个样式的HTML文档的&lt;head&gt;中链接就可以了<br>
+                    &lt;link type="text/css" rel="stylesheet" href="css/bg.css"&gt;<br>
+            </li>
+        </ol>
+        理解与使用css的属性<br>
+        总的来说，css提供了8大类属性<br>
+        1 类型属性: 用来设置HTML组件的字体、字号等<br>
+        2 背景属性: 用来设置HTML组件的背景颜色,图象<br>
+        3 区块属性：用来设置HTML组件的字距、行号等<br>
+        4 方框属性：用来设置HTML组件的显示方式、对齐方式等<br>
+        5 定位属性：用来设置层的显示方式、对齐方式等<br>
+        6 边框属性：边框粗细、高度及颜色等<br>
+        7 扩展属性：用来设置鼠标及滤镜效果<br>
+        8 列表属性:  用来设置列表属性<br>
+
+</body>
+</html>

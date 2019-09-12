@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>插入图像及设置图像属性</title>
+    <link type="text/css" rel="stylesheet" href="../样式表.css">
+</head>
+<body>
+    <h2>一、图像及网页相集</h2>
+    <p>插入图像及设置图像属性：</p>
+    <ol>
+        <li>插入图像按扭。</li>
+        <li>插入菜单：<br>
+            注：如果被选择的文件，是网站目录以外的文件，系统就会问你是否将图片复制到网站内
+        </li>
+    </ol>
+    <p>插入图像占位符：</p>
+    <ol>
+        <li>是指在网页中插入一个“空”图像，该图像没有指定真正的图像文件URL，而是仅仅在文档中占据了一个位置</li>
+        <li>所谓图像占位符：实际上仍然是由&lt;img&gt;标记生成的，只是src属性是空的 <br> &lt;img src=“” width=“” height=“” name=“”&gt;</li>
+    </ol>
+    <p>创建图像映射：</p>
+    <ol>
+        <li>图像映射是指一个从图像中分割出的链接区域，又叫热点。当热点被点击时将产生一个动作，如打开一个文件。</li>
+        <li>按shift可选中多个热点。</li>
+        <li>图像映射的作用：就是把一幅图像划分为几部分，或者说几个热点，不同的热点对应不同的超级链接</li>
+    </ol>
+    <p>图像热区代码：</p>
+    <ol>
+        <li>在&lt;img&gt;标记中指定一个热区名</li>
+        <li>具体的图像热区是由&lt;map&gt;标记决定,在这个标记中最主要的属性是name=“”,其属性值应该与&lt;img&gt;标记中的name属性相同</li>
+        <li>热区的具体坐标以及链接地址信息是由&lt;area&gt;标记决定的,它放在&lt;map&gt;标记中</li>
+        <li>shap属性决定热区的形状(rect 矩形)(circle圆形)(poly多边形)</li>
+    </ol>
+
+    &lt;img src="004.jpg" width="276" height="245"  usemap="#Map"&gt;<br>
+    &lt;map name="Map"&gt; <br>
+    &lt;area  shape=“rect“  coords=”87,56,175,154” href=“#” target="_parent" alt=“”&gt;<br>
+    &lt;/map&gt;<br>
+
+
+    <p>创建翻转图像：insert\insertactive Image</p>
+    图像的轮替效果实际上是由两幅图像完成的，一幅图像是鼠标没有指向图像区域时显示的图像，称作原始图像，另一个是鼠标指向图像区域时显示的图像，称为轮替图像<br>
+    <p><span class="em">网页相集：</span></p>
+    <ol>
+        <li>command-create Web photo…</li>
+        a.在Dreamweaver中，系统内置了创建网站相册命令，但是此命令实际是调用了Fireworks的图片批处理功能，因此，如要创建网站相册，必须要安装Fireworks。<br>
+        <span class="em">b.属性设置：</span>
+        <ol>
+            <li>选择”命令/创建网页相册</li>
+            <li>在”相册标题”文本框中输入相册的标题</li>
+            <li>单击”源图象文件夹”在打开的对话框中指定源图象文件夹</li>
+            <li>单击”目标文件夹”在打开的对话框中指定目标文件夹</li>
+            <li>单击确定.打开Fireworks</li>
+        </ol>
+    </ol>
+    <h2>二、超级链接</h2>
+    <p>概念:</p>
+    就是将网络中所有的URL一个个链接起来，URL，即生成链接的路径。
+    <p>什么是URL?</p>
+    全称Uniform Resource Locator（统一资源定位符），即网站地址。 URL确定了要浏览的地址，浏览器通过超文本传输协议(HTTP)，将Web服务器上站点的网页代码提取出来，并翻译成网页。
+    <p>分解一个URL。比如：</p>
+    <ol>
+        <li>http://www.sohu.com/index.html</li>
+        <li>URL的第一个部分http://表示的是要访问的文件的类型</li>
+        <li>第二部分是www.sohu.com。这是主机的名字。表示要访问的文件存放在名为www的服务器里，该服务器登记在sohu.com域名之下。</li>
+    </ol>
+    <p>链接源</p>
+    链接目标<br>
+    通常将开始位置端点称作源端点，而目标位置的端点称目标端点，目标端点可以是任意的网络资源，如页面、图像、声音、程序等<br>
+    <p>绝对路径和相对路径</p>
+    绝对路径：是包括服务器的完全路径。主要用于外部链接，即网站与网站的连接。<br>
+    相对路径：只包含当前文档的文件夹的路径。主要用于网站内部连接，即本站内的网页与网页的链接。<br>
+    <p><span class="em">链接的分类：</span></p>
+    1. 按照源端点区分链接：超文本(Hypertext)、超链接(Hyperlink)<br>
+    a. 超文本就是利用文本构建的超级链接。源端点是文本。<br>
+    使用属性面板<br>
+    使用“指向文件”图标链接文档<br>
+    使用”超链接“命令<br>
+    修改链接式样<br>
+    b.创建图像链接<br>
+    c.创建电子邮件链接<br>
+    <p>使用E-mail Link按钮创建</p>
+    单击这种链接可以启动电子邮件,使用这种链接，可以启动电子邮件程序，允许用户书写电子邮件，并发送到指定地址<br>
+    例如：<br>
+    &lt;a href=‘mailto:darling819@163.com?subject=how are you’&gt;&lt;/a&gt;<br>
+    d.使用锚点链接是页面内的超级链接，用于文本内容很多的页面，方便浏览者找到所需的内容。其超链接地址格式为“#命名锚记”<br>
+    e.在跳转菜单上建立超链接
+    <p>创建导航条</p>
+    <ol>
+        <li>它也称导航栏：是图像类型超链接在HTML文档中的又一应用</li>
+        <li>它是由一系列的显示为按钮的图像，每个图像按钮链接到站点中不同的文档中，通过单击图像按钮，就可实现在站点中的浏览，同时也可为这些图像实现轮替效果</li>
+        <li>导航条可以看成一组轮替图像的集合，它可以使网站的结构更加层次分明</li>
+        <li>insert-Interactive Image-Navigation Bar(插入导航条)</li>
+    </ol>
+    <p>按照目标端点区分链接：</p>
+    <ol>
+        <li>外部链接：它的目标端点是本站以外的站点或文档。利用该链接可以跳转到其他文档或文件。包括（文字、图像及图像热区）链接。</li>
+        <li>内部链接：它的目标端点是本站点中的文档。<br>
+            a.如果超级链接指向的文档不是一个HTML文档。而是其他类型的文档，那么单击产生的也不相同<br>
+            b.如果链接的文档是诸如gif jpg或png之类的浏览器可以识别的类型，则仍然会在浏览器的窗口中载入它们<br>
+            c.如果是浏览器不能识别的文档，例如一个带有*.zip扩展名的压缩文件等，或带有*.EXE扩展名的执行文件，则通常会打开一个对话框下载<br>
+            注：在DW中凡是不被浏览器识别的格式文件(HTM,HTML,ASP,PHP.PERL,SHTML等以外的)作为链接目标时,默认的操作都是下载<br>
+        </li>
+        <li>空链接：<br>
+            它是没有经过指派目标端点的链接，不会跳转到任何位置，对于附加行为有特殊用处
+            创建空链接只要输入一个“#”号<br>
+            点击空链接时，页面往往重置到页首端，如何处理？<br>
+            <ol>
+            <li>用代码“javascript:void(null)”代替原来的“#”标记</li>
+            <li>用三个“#”号也可以</li>
+            </ol>
+        </li>
+        <li>脚本链接：它允许用户创建一个执行javascript代码的链接。<br>
+                &lt;a href=mailto:darling819@163.com?subject=how are you&gt;与我联系&lt;/a&gt;
+        </li>
+    </ol>
+    <p>&lt;a href="javascript:window.external.addFavorite('http://www.hfitu.cn,合肥信息技术职业学院')",title="加入收藏"&gt;加入收藏&lt;/a&gt;</p>
+    <p>&lt;a href="#" onclick="window.external.addFavorite('http://www.xinwen520')"&gt;加入收藏&lt;/a&gt;</p>
+    <p>&lt;a href="#" onclick="javascript:this.style.behavior='url(#default#homepage)';this.setHomePage('www.sohu.com')"&gt;设为首页&lt;/a&gt;</p>
+    <p>&lt;a href="#" onclick="this.style.behavior='url(#default#homepage)';this.sethomepage('http://www.ah..')"&gt;设为首页&lt;/a&gt;</p>
+    <p><span class="em">布局视图的使用</span></p>
+    <p>在“布局”模式下 可以在添加内容前使用布局单元格和表格来对页面进行布局，包括嵌套在其他表格中的表格。</p>
+    布局：<br>
+    要以布局模式创建表格,请选择插入栏的布局类别：<br>
+    布局表格和布局单元格<br>
+    <ol>
+        <li>布局表格:<br>
+            在页面的空白区域或其他布局表格内绘制表格<br>
+        </li>
+        <li>布局单元格:在页面空白区域或布局表格内绘制表格单元格<br>
+                若要布局多个表格可按住ctrl键<br>
+                若不要单元格靠齐则按住alt键编辑 > 首选参数 > 布局<br>
+                若要返回正常布局模式:布局 > 标准布局<br>
+        </li>
+    </ol>
+
+</body>
+</html>

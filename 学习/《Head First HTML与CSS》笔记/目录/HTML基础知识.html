@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML基础知识</title>
+</head>
+<body>
+<style type="text/css">
+	.em {
+		color: rgb(250, 30, 30);
+		font-weight: bold;
+		border-bottom:2px solid rgb(250, 30, 30);
+		padding:1px;
+	  }
+</style>
+	  
+<table border="2" align="center" style="font-size: 18px;">
+        <colgroup span="4">
+        	    <col span="1" style="width: 150px;background: AntiqueWhite">
+        	    <col span="2" style="width: 200px;background: Coral">
+        	    <col span="1" style="width: 150px;background: Bisque">
+        </colgroup>
+        <caption style="font-size: 30px;color: green">特殊符号的使用</caption>
+        <thead>
+        	<tr style="height: 50px; background: SteelBlue"><th>符号</th><th>实体名称</th><th>实体数值</th><th>描述</th></tr>
+        </thead>
+        <tbody>
+        	<tr align="center"><td></td><td>&ampnbsp;</td><td>&amp#160;</td><td>空格</td></tr>
+        	<tr align="center"><td><</td><td>&amplt;</td><td>&amp#60;</td><td>小于</td></tr>
+        	<tr align="center"><td>&lt;</td><td>&amplt;</td><td>&amp#60;</td><td>小于</td></tr>
+        	<tr align="center"><td>&gt</td><td>&ampgt;</td><td>&amp#62;</td><td>大于</td></tr>
+        	<tr align="center"><td>&amp</td><td>&ampamp;</td><td>&amp#38</td><td>连接符号</td></tr>
+        	<tr align="center"><td>&quot</td><td>&ampquot;</td><td>&amp#34</td><td>双引号</td></tr>
+        	<tr align="center"><td>&plusmn</td><td>&ampplusmn;</td><td>&amp#177;</td><td>正负值</td></tr>
+        	<tr align="center"><td>&copy</td><td>&ampcopy;</td><td>&amp#169;</td><td>著作权</td></tr>
+        	<tr align="center"><td>&reg</td><td>&ampcopy;</td><td>&amp#174;</td><td>注册商标</td></tr>
+        </tbody>
+        <tfoot>
+        	<tr><td colspan="4" style="height: 40px;background: SlateGray">其他的特殊符号大家可以网上搜索一下，知道常用的即可......</td></tr>
+        </tfoot>
+</table>
+<p>段前缩进两个字符 代码示例：p { text-indent:2em; }</p>
+<h2>三、一些标记</h2>
+<ol>
+<li>&lt;html&gt;..&lt;/html&gt;指定型并告知当前的文档类型是HTML文档</li>
+<li>&lt;title&gt;..&lt;/title&gt;该标记用来指定网页标题栏显示的标题</li>
+<li>&lt;head&gt;..&lt;/head&gt;指定当前文档的头部即文档说明信息，包括主要的&lt;title&gt; &lt;meta&gt;与&lt;script&gt;
+  等标记。其中&lt;script&gt;标记指定义头部的脚本语言及其函数。</li>
+<li>其中&lt;meta&gt;标记指当前文档被搜索引擎使用的关键字样式的预先定义。</li>
+<li>注释标记：凡是放在&lt;!--与--&gt;之间的文字，都会被浏览器略过不解读，也就不会显示在浏览器窗口上。</li>
+</ol>
+<p>&lt;body&gt;….&lt;/body&gt;
+ 所有浏览器中显示的网页元素均需包含在该标记中
+ 属性：背景色彩和文字色彩
+&lt;body bgcolor=# text=# link=#&gt;
+</p>
+<p>bgcolor --- 背景色彩</p>
+<p>text --- 非可链接文字的色彩</p>
+<p>background ---网页背景图像的位置</p>
+<p>Bgproperties---锁定背景图像不随滚动条一起滚动</p>
+<p>link --- 可链接文字的色彩</p>
+<p>alink --- 正被点击的可链接文字</p>
+<p>vlink --- 已经点击(访问)过的可链接文字的色彩</p>
+<h2>四、WINDOWS 基本颜色和名称</h2>
+<p>海蓝 #00FFFF &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 海军蓝 #000080</p>
+<p>黑 #000000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 橄榄绿 #808000</p>
+<p>蓝 #0000FF &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 紫 #800080</p>
+<p>紫红 #FF00FF &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 红 #FF0000</p>
+<p>灰 #808080 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 银白 #C0C0C0</p>
+<p>绿 #008000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 凫蓝 #008080</p>
+<p>石灰色 #00FF00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 白 #FFFFFF</p>
+<p>茶色 #800000黄 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #FFFF00</p>
+<img src="../图片/001.png" alt="">
+<p>换行&lt;br&gt; (将文本强行换行) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：该标记经常使用，属单向标记</p>
+<p>段落标签&lt;P&gt; <将文本强行换段> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;属性：align=(文本的对齐方式) 有三个（CENTER、LEFT、RIGHT）</p>
+<p>水平线段&lt;HR &gt; 这个标签可以在屏幕上显示一条水平线，用以分割页面中的不同部分。&lt;HR &gt;的属性：</p>
+<ul>
+	<li>size: 水平线的宽度</li>
+	<li>width: 水平线的长，用占屏幕宽度的百分比或象素值来表示</li>
+	<li>align: 水平线的对齐方式，有LEFT  RIGHT CENTER三种</li>
+	<li>color: 水平线的颜色</li>
+</ul>
+<p>字体标记:&lt;font&gt;&lt;/font&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="em">属性 : size=(字号) color=(文本颜色) face=(字体)</span></p>
+<p>应用实例：<font face=“宋体” size=“3” color=“red”>喧哗的都市，到处充斥着廉价玫瑰</font></p>
+<ul><li>一些效果</li></ul>
+<span class="em">一段文字的效果</span>
+<p>代码如下所示：</p>
+&lt;style type="text/css"&gt;<br>
+	.em {<br>
+		color: rgb(250, 30, 30);<br>
+		font-weight: bold;<br>
+		border-bottom:2px solid rgb(250, 30, 30);<br>
+		padding:1px;<br>
+		}<br>
+&lt;/style&gt;<br>
+&lt;span class="em"&gt;一段文字的效果&lt;/span&gt;<br><br>
+&lt;link type="text/css" rel="stylesheet" href="../样式表.css"&gt;<br><br><br>
+</body>
+</html>

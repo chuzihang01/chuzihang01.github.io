@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>层及时间轴的应用</title>
+    <link type="text/css" rel="stylesheet" href="../样式表.css">
+</head>
+<body>
+    <p>时间线在网页中应用</p>
+    <p>怎么样去创建动态效果</p>
+    <h2>一、概念</h2>
+    <p>层：是一种HTML内容的容器，层可定位在页面上的任意位置，并且其中可包含文本，图像，表单等所有可直接用于文档的元素</p>
+    <h2>二、层的创建方法</h2>
+    <ol>
+        <li>布局面板
+            “插入”面板中,在“布局” 选项卡中，选择层(layer)按钮，在编辑区拖动即可插入层
+        </li>
+        <li>层用于控制浏览器窗口中对象的精确位置</li>
+        <li>在IE中通常为&lt;div&gt;&lt;/div&gt;或&lt;span&gt;&lt;/span&gt;<br>
+            <span class="em">注：</span> 如一次性插入多个层，可按“CTRL”键画层
+        </li>
+    </ol>
+    <h2>层的属性设置</h2>
+    <ul>
+        <li>层编号：当前层名称</li>
+        <li>左，上：相对于页面或其父层左上的位置</li>
+        <li>高，宽：层的宽度和高度</li>
+        <li>Z轴：设置层的层次属性</li>
+        <li>可见性：设置层的可见性<br>
+            Default：默认是可见的<br>
+            inherit:  继承   <br>
+            Visible：显示层及内容　 <br> 
+            Hidden：隐藏层及内容<br>
+        </li>
+        <li>背景图像</li>
+        <li>背景颜色</li>
+        <li><span class="em">Overflow （溢出）：选择当层内容超出层尺寸时如何处理</span><br>
+            <ul>
+                <li>Visible：自动增加尺寸</li>
+                <li>Hidden：隐藏超出部分内容</li>
+                <li>Scroll：添加滚动条</li>
+                <li>Auto：内容超出后自动添加滚动条</li>
+            </ul>
+            Clip：选区的L,T,R,B分别设置层的可视区域<br>
+        </li>
+    </ul>
+    <p>选择层</p>
+    在Layers面板中，单击层名；单击层边框；按shift键，单击层中任意位置；单击层标记。<br>
+    注：选择多个层：按shift键，点击<br>
+    <p>建立嵌套层</p>
+    嵌套层是指包含在其他层中的层，使用嵌套层的好处是确保该层能永远之于其父层的上方<br>
+    <p>方法：</p>
+    <ol>
+        <li>新建一个层layer1</li>
+        <li>按住alt键不放，在layer1中的任意位置画一个新层layer2 <br>
+            注：层的关系有嵌套和重叠。重叠两个层是相互独立的；嵌套时子层会随父层变化而变化。
+        </li>
+    </ol>
+    <p>层的剪辑</p>
+    <ol>
+        <li>新建一个层layer1</li>
+        <li>在层中插入一图象</li>
+        <li>建立一嵌套层</li>
+        <li>移动嵌套层位置和改变大小，是其套住正好要剪辑的图像部分。</li>
+        <li>记下嵌套层属性面板中L、T、W、H值。</li>
+        <li>选中layer1，在属性面板中clip选区中输入：<br>
+            L(刚记下的L)；T(刚记下的T)；<br>
+            R(L+W)；B(T+H)。<br>
+        </li>
+        <li>单击编辑区空白处。</li>
+    </ol>
+    <p>将表格转化为层</p>
+    修改 > 转换 > 表格到层<br>
+    布局工具:防止层重叠<br>
+    显示层面板<br>
+    显示网格<br>
+    整齐到网格<br>
+    <p>将层转换为表格:</p>
+    修改 > 转换 > 层到表格
+    <ol>
+        <li>最精确:为每个层都创建表格单元格,层与层之间的空间使用单元格代替</li>
+        <li>最小合并空白单元:如果层与层之间的距离小于指定的像素宽度,则舍弃层之间的距离</li>
+        <li>使用透明的GIF:<br>
+            用透明的GIF图象填充表格的最前一行,以确保表格在所有浏览器中以相同的列宽显示<br>
+        </li>
+        <li>置于页面中央:<br>
+            将转换后的表格在页面中居中显示<br>
+        </li>
+    </ol>
+    <h2>三、时间线</h2>
+    <p>是Dreamweaver实现动画的一种方法，用户不需要编辑代码或使用任何ActiveX、Java或其他任何插件即可在网页上制作动画效果。时间线主要是通过改变图层的位置、属性、可见性以及图层的顺序来实现动画效果的。</p>
+    <h3>时间线的编辑:</h3>
+    通过拖动路径创建时间线<br>
+    步骤: <br>
+    <ol>
+        <li>创建一个新层,拖动到开始位置;</li>
+        <li>打开时间轴面版.选择 修改 > 时间轴 > 录制层路径</li>
+        <li>随意拖动层,创建自己想要的路径</li>
+    </ol>
+    <p>内联框架的使用:</p>
+    内联框架是网页中一种独特的使用方法.和层或表格结合起来使用往往能收到许多意想不到的效果<br>
+    代码如下: <br>
+    &lt;iframe&gt;&lt;/iframe&gt;表示框架<br>
+    <p><span class="em">属性包括：</span></p>
+    <ol>
+        <li>Scrolling：<br>
+            滚动条“auto”自动“no”无“yes”有<br>
+        </li>
+        <li>width (宽）和height（高）<br>
+            例：<br>
+            &lt;iframe src="1.html" scrolling="auto" width="700" height="200"&gt;&lt;/iframe&gt;<br>
+        </li>
+    </ol>
+    <p><span class="em">通迅协议：</span></p>
+    <ol>
+        <li>FTP： File Transfer Protocol是一种文件传输协议，是快速、高效可靠的信息传输方法，这个协议能支持文件从一台计算机复制到另一台计算机上</li>
+        <li>http://   :超文本传输协议</li>
+        <li>file://    : 存取本地磁盘文件的服务</li>
+        <li>news:   网络新闻协议。</li>
+        <li>mailto:  传送E-mail协议</li>
+        <li>telnet:  登陆远程系统服务</li>
+    </ol>
+
+</body>
+</html>

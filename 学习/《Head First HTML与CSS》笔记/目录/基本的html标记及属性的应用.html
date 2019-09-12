@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+   <meta charset="UTF-8">
+   <link type="text/css" rel="stylesheet" href="../样式表.css">
+	<title>基本的html标记及属性的应用</title>
+</head>
+<body>
+   <h2>一、基本的html标记及属性的应用</h2>
+    1.文本元素，就是讲一段文本设置成相匹配的结构和含义 <br>
+    2.&lt;b&gt;加粗文字&lt;/b&gt;------------<b>加粗文字</b> <br>
+    3.&lt;i&gt;倾斜文字&lt;/i&gt;------------<i>倾斜文字</i> <br>
+    4.&lt;del&gt;倾斜文字&lt;/del&gt;------------<del>倾斜文字</del> <br>
+    5.&lt;strong&gt;我的实际作用也是加粗文字&lt;/strong&gt;------------<strong>我的实际作用也是加粗文字</strong> <br>
+    6.&lt;wbr&gt;------------我的作用是表示安全换行Theshiyigehenchanghenchang<wbr>dedanci. <br>
+    7.&lt;em&gt;我的作用是强调&lt;/em&gt;------------<em>我的作用是强调</em> <br>
+    8.&lt;s&gt;删除线&lt;/s&gt;------------我的实际作用就是 <s>删除线</s><br>
+    9. &lt;u&gt;给文字加下划线&lt;/u&gt;------------<u>给文字加下划线</u><br>
+    10. &lt;ins&gt;给文字加下划线&lt;/ins&gt;------------<ins>给文字加下划线</ins><br>
+    11. &lt;small&gt;添加小号字体&lt;/small&gt;------------<small>添加小号字体</small><br>
+    12. CH&lt;sub&gt;4&lt;/sub&gt;COOH; m&lt;sup&gt;3&lt;/sup&gt;------------CH<sub>4</sub>COOH; m<sup>3</sup><br>
+    13. &lt;dfn&gt;WTO&lt;/dfn&gt;------------<dfn>WTO</dfn> <br>
+    14.&lt;q&gt;我的实际作用就是给文本加上双引号&lt;/q&gt;------------<q>我的实际作用就是给文本加上双引号</q><br>
+    15.code元素用来表示计算机代码片段；&lt;code&gt;function(){}&lt;/code&gt;------------code元素用来表示计算机代码片段；<code>function(){}</code><br>
+       var元素用来表示编程语言中的变量； &lt;var&gt;num&lt;/var&gt;------------var元素用来表示编程语言中的变量； <var>num</var><br>
+	   samp元素表示程序或计算机的输出&lt;samp&gt;您没有权限浏览该网页&lt;/samp&gt;------------samp元素表示程序或计算机的输出<samp>您没有权限浏览该网页</samp><br>
+	   kbd元素表示某部分内容是由用户利用键盘输入如：请按&lt;kbd&gt;Enter&lt;/kbd&gt;键------------kbd元素表示某部分内容是由用户利用键盘输入如：请按<kbd>Enter</kbd>键 <br>
+	16. &lt;ruby&gt;英雄 &lt;rt&gt;(ying) (xiong)&lt;/rt&gt;&lt;/ruby&gt;------------<ruby>英雄 <rt>(ying) (xiong)</rt></ruby><br>
+	17. &lt;cite&gt;英雄&lt;/cite&gt;------------<cite>英雄</cite> <br>
+	18. &lt;bdo dir="rtl"&gt;文字方向&lt;/bdo&gt;------------<bdo dir="rtl">文字方向</bdo> <br>
+	19. &lt;mark&gt;我的实际作用就是加上一个黄色的背景。&lt;/mark&gt;------------<mark>我的实际作用就是加上一个黄色的背景。</mark><br>
+	20.&lt;time&gt;2015-9-18&lt;/time&gt;------------<time>2015-9-18</time><br>
+	21.&lt;span&gt;一般文本&lt;/span&gt;------------<span>一般文本</span><br>
+
+<p>文本格式预定义标记:&lt;pre&gt;….&lt;/pre&gt;(保留文本的原始格式)在这标记之间的文本在浏览器中的显示效果与在编辑程序中看到的一样。</p>
+<p>图像标记：
+      <img>标记包含src属性。Src的属性值是所引用图像的url地址。该地址既可以是绝对地址也可以是相对地址。包含以下属性：
+      <ul>
+         <li>alt:替代文本</li>
+         <li>border:图像的边框，属性值为像素。</li>
+         <li>Width:图像的宽度。</li>
+         <li>height:图像的高度。</li>
+      </ul>     
+</p>
+<p><strong>Align:</strong>图像的对齐方式：<br>
+      1）水平对齐方式：left ，right<br>
+      2）垂直对齐方式：top，middle，bottom<br>
+      Hspace：定义水平间距，单位像素<br>
+      Vspace：定义垂直间距，单位像素<br>
+      &lt;IMG style="FILTER: gray(color=#ffedff)" src="你需要的图片"&gt;
+</p>
+<p>掌握HTML语言的各种标记和标记的属性及属性值，区分每个元素的属性，逐步操作每个代码，同时查看效果。</p>
+
+<h2>二、列表标记</h2>
+<p>列表是HTML网页中重要的元素，列表是作用相当于文字处理软件中的“项目符号与编号”。HTML中规定了多种列表元素。列表分为无序列表和有序列表。</p>
+<ol>
+   <li><span class="em">无序列表：</span><br><strong>是由&lt;ul&gt;和&lt;li&gt;元素定义的。无序列表的默认符号是圆点。 &lt;ul&gt;元素包含type属性，通过定义不同的type属性可以改变列表的项目符号。 Type属性包括disc（圆）,circle（圆圈）,square（方块）</strong><br><br>
+      &lt;ul type=“”&gt;…&lt;/ul&gt; 符号列表标记<br>
+      应用实例：&lt;ul type=“square”&gt;<br>
+         &lt;li&gt; 事业的意义在于献身 &lt;/li&gt;<br>
+         &lt;li&gt; 科学的意义在于求真&lt;/li&gt;<br>
+         &lt;li&gt;  艺术的意义在于创新&lt;/li&gt;<br>
+         &lt;/ul&gt;<br>
+         也可以在&lt;li&gt;中继续加type单独设定<br>
+   </li>
+   <li><span class="em">有序列表</span><br>
+      是由&lt;ol&gt;和&lt;li&gt;元素定义的。 &lt;ol&gt;元素也包含type属性， type属性值有1 (阿拉伯数字1)、a(小写字母a) ，A，I，i等。 &lt;ol&gt;元素还可以定义列表的起始编号，需用start属性。<br><br>
+      例子：<br>
+      &lt;ol type=“i”&gt;<br>
+      &lt;li&gt;教学是事业&lt;/li&gt;<br>
+      &lt;li&gt;教学是科学&lt;/li&gt;  <br>
+      &lt;li&gt;教学是艺术&lt;/li&gt; <br>
+      &lt;/ol&gt;<br>
+      <br>
+</li>
+</ol>
+<h2>三、链接标记：&lt;a&gt;…&lt;/a&gt;</h2><br>
+&lt;a href=http://www.ahxh.com&gt;安徽&lt;/a&gt;<br>
+<ol>
+   <li>&lt;a href="资源地址"&gt;链接文字&lt;/a&gt;</li>
+   <li>标签&lt;a&gt;表示一个链接的开始</li>
+   <li>&lt;/a&gt;表示链接的结束；“href”属性:定义了这个链接所指的地方</li>
+</ol>
+<strong>格式：</strong><br>
+&lt;a href=http://www.baidu.com title=“百度” target=“_blank”&gt;…&lt;/a&gt;
+<ol>
+   <li>href=后面的是要链接的文件的路径</li>
+   <li>title属性：设置鼠标提示信息</li>
+   <li><span class="em">target=后面的是打开的窗口的属性(默认的是本窗口)可选参数有</span>：<br>
+      target=_blank   //这样会打开一个新窗口<br>
+      target=_self   //同一窗口<br>
+   </li>
+</ol>
+<h3>目录链接：</h3>
+制作目录链接方法是：<br>
+ <ol>
+    <li>把某段落设置为链接位置，格式是&lt;A NAME="链接位置名称"&gt;&lt;/A&gt;在调用此链接部分的文件，定义连接：&lt;A HREF="文件名＃链接位置名称"&gt;链接文字&lt;/A&gt; <br> 如果是在一个文件内跳转，文件名可以省略不写。注：跳转到页面的另外一个地方例子：&lt;a name=“aa"&gt; ... &lt;/a&gt;&lt;a href="#aa"&gt; ... &lt;/a&gt;</li>
+    <li>空链接：&lt;a href=“#”&gt;…&lt;/a&gt;</li>
+    <li>运用脚本语言做链接</li>
+ </ol>
+
+<h2>四、小 Demo</h2>
+<p><span class="em">鼠标点击显示下划线，鼠标移开则无下划线，示例如下所示</span>：</p>
+&lt;style type="text/css"&gt;<br>
+#banner a{<br>
+  text-decoration:none;<br>
+}<br>
+#banner a:hover{<br>
+  text-decoration:underline;<br>
+}<br>
+&lt;/style&gt;<br>
+&lt;td>&lt;div id="banner"&gt;<br>
+&lt;a href="https://www.zhangxinxu.com/wordpress/" target="_blank"&gt;<br>
+&lt;font color="#0066FF">张鑫旭-鑫空间-鑫生活&lt;/font>&lt;/a>&lt;/div&gt;<br>
+&lt;/td&gt;   <br><br>
+<h2>五、定义框架链接</h2>
+&lt;iframe&gt;标签包含多个属性，其中被 HTML5 支持或新增的属性如表所示。
+<table width="514" height="460" border="1" align="center" cellpadding="0" cellspacing="0">
+      <caption style="font-size: 20px">&lt;iframe&gt;标签属性</caption>
+      <tr>
+        <td width="246" height="39" align="center"><strong>属性</strong></td>
+        <td width="262" align="center"><strong>取值</strong></td>
+        <td width="262" align="center"><strong>说明</strong></td>
+      </tr>
+      <tr>
+        <td height="43" align="center">O(1)</td>
+        <td height="43" align="center">常数阶</td>
+        <td width="262" align="center"><strong>俗称</strong></td>
+      </tr>
+      <tr>
+        <td height="40" align="center">O(logn)</td>
+        <td height="40" align="center">对数阶</td>
+        <td height="43" align="center">常数阶</td>
+      </tr>
+      <tr>
+            <td height="40" align="center">O(logn)</td>
+            <td height="40" align="center">对数阶</td>
+            <td height="43" align="center">常数阶</td>
+      </tr>
+      <tr>
+            <td height="40" align="center">O(logn)</td>
+            <td height="40" align="center">对数阶</td>
+            <td height="43" align="center">常数阶</td>
+      </tr>
+      <tr>
+            <td height="40" align="center">O(logn)</td>
+            <td height="40" align="center">对数阶</td>
+            <td height="43" align="center">常数阶</td>
+      </tr>
+      <tr>
+            <td height="40" align="center">O(logn)</td>
+            <td height="40" align="center">对数阶</td>
+            <td height="43" align="center">常数阶</td>
+      </tr>
+      <tr>
+            <td height="40" align="center">O(logn)</td>
+            <td height="40" align="center">对数阶</td>
+            <td height="43" align="center">常数阶</td>
+      </tr>
+      <tr>
+            <td height="40" align="center">O(logn)</td>
+            <td height="40" align="center">对数阶</td>
+            <td height="43" align="center">常数阶</td>
+      </tr>
+      <tr>
+            <td height="40" align="center">O(logn)</td>
+            <td height="40" align="center">对数阶</td>
+            <td height="43" align="center">常数阶</td>
+      </tr>
+      <tr>
+            <td height="40" align="center">O(logn)</td>
+            <td height="40" align="center">对数阶</td>
+            <td height="43" align="center">常数阶</td>
+      </tr>
+    </table>
+
+</body>
+</html>

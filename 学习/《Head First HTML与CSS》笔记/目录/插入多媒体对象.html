@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>插入多媒体对象</title>
+    <link type="text/css" rel="stylesheet" href="../样式表.css">
+</head>
+<body>
+    <h2>一、在网页中插入flash按钮、文本、动画及插件 音乐 视频等。</h2>
+    <ol>
+        <li><span class="em">插入音乐: </span><br>
+            a.&lt;EMBED SRC=“*…”&gt;这个标记可以放在 &lt;BODY&gt; 和 &lt;/BODY&gt; 之间的任何地方。在这个标记放置的位置会出现一个类似媒体播放程式的图案，可以控制播放音乐或暂停。<br>
+            &lt;embed src="10.mid" width=145　height=20&gt;<br>
+            如果我要把音乐当作背景音乐来用，也就是不要显示控制面板。而且一进入画面就要播放，然後一直重复。<br>
+            就要这样写<br>
+            &lt;embed　src=“…"  hidden=true  autostart=true loop=true&gt;<br>
+            b.如果我要把音乐当作背景音乐来用，也就是不要显示控制面板。而且一进入画面就要播放，然後一直重复。<br>
+            就要这样写<br>
+            &lt;embed　src=“…"  hidden=true  autostart=true loop=true&gt;<br>
+            属性：<br>
+            <ol>
+                <li>AUTOSTART=“TRUE / FALSE”是否要在音乐档传完之後，就自动播放音乐。</li>
+                <li>LOOP=“TRUE / FALSE / 整数”设定是否要自动反覆播放。</li>
+                <li>WIDTH 和 HIGH=“整数”设定控制面版的宽度和高度</li>
+                <li>HIDDEN="TRUE" 如果写上这个属性的话，就会完全隐藏控制面板</li>
+            </ol>
+            &lt;EMBED&gt;可以放在&lt;BODY&gt; 和 &lt;/BODY&gt; 之间的任何地方。<br>
+            记住：在这个标记放置的位置会出现一个控制面板的图案，你可以视自己的需求，把它放在适当的位置，也可以使用HIDDEN=TRUE 将面板隐藏起来，配合AUTOSTART=TRUE 当背景音乐使用。<br>
+        </li>
+        <li>插入背景音乐：<br>
+                你如果想插入背景音乐，可以使用以下的格式：<br>
+                &lt;bgsound src=“URL”&gt;<br>
+                循环播放：<br>
+                &lt;bgsound src=“url” loop=“-1”&gt;<br>
+                按设定次数播放：<br>
+                &lt;bgsound src=“url” loop=“次数” &gt;<br>
+        </li>
+        <li>插入视频动画<br>
+            <ol>
+                <li>
+                    基本语法<br>
+                    &lt;img src=“url.gif” dynsrc=“url.avi”&gt;<br>
+                    a.用 url.avi 这一 AVI文件来播放视频；<br>
+                    b.用 url.gif 这一 GIF 图象作为视频的封面，即：在浏览器尚未完全读入 AVI 文件时，先在 AVI 播放区域显示该图象。
+                </li>
+            </ol>
+        </li>
+        插入flash动画的方法<br>
+        <ol>
+            <li>单击插入/常用/flash按钮</li>
+            <li>插入菜单/媒体/ flash按钮
+                    属性的设置：
+                    <ol>
+                        <li>menu参数：设置在浏览器中显示的flash电影上，单击右键时，是否显示快捷菜单。</li>
+                        <li>wmode参数：控制电影的透明：如让flash电影背景透时，可在param列中输入wmode,然后在value列中输入transparent</li>
+                    </ol>
+            </li>
+        </ol>
+        如果是插入swf文件：有以下几个属性：<br>
+        <ol>
+            <li>wmode=transparent</li>
+            <li>vspace=“数值”     hspace=“数值”（离页面左边和顶部的距离）</li>
+            <li>align=“left,right”<br>
+                注：插入前要首先保存文件
+            </li>
+        </ol>
+    </ol>
+    <p>插入flash文本对象：</p>
+    <p>插入flash文本也是Dreamweaver从４.０开始支持的功能，利用该功能可以使用自选的字体、字型和字号去制作一个仅包含文本对象的flash动画</p>
+    <p>把鼠标指针停留在插入位置，然后单击插入面板媒体子面板中的插入 flash 文本按钮</p>
+    <p>插入flash按钮</p>
+    <p>把鼠标指针停留在插入位置，然后单击插入面板媒体子面板中的插入 flash button按钮</p>
+    <p>Flash元素</p>
+    <p>插入方法:</p>
+    <ol>
+        <li>执行插入/媒体/Flash查看器</li>
+        <li>或单击插入面板中的Flash元素</li>
+        <li><span class="em">属性设置</span><br>
+            Bgcolor 背景颜色<br>
+            Captioncolor图片标题的颜色<br>
+            captionFont图片标题的字体<br>
+            captionSize图片标题的大小<br>
+            frameColor图片边框的颜色<br>
+            frameShow是否显示边框<br>
+            frameThickness边框的宽度<br>
+            imageCaptions图片下方的标题（幻灯片的标题）<br>
+            imageLinks单击后图片的链接<br>
+            imagelinkta打开窗口的格式<br>
+            imageURLs编辑图片的地址<br>
+            SHOWcONTROLS是否显示播放器的控制器<br>
+            slideAutoPLAY幻灯片是否会自动播放（否）<br>
+            slideDelay延时，每张幻灯片要停留多长时间<br>
+            slideloop是否需要循环播放幻灯片<br>
+            title幻灯片的标题<br>
+            titleColor标题的颜色<br>
+            titleFont标题的字体<br>
+            titleSize标题的大小<br>
+            transtionsType图片之间的切换效果<br>
+        </li>
+    </ol>
+    <h2>五、插件(plugin)</h2>
+    <p>插件英文叫做Plugin，是为了增强某些软件所不具备的功能而特殊设计的程序，主程序通过调用plugin可以扩展其功能。</p>
+    <p>视频文件的使用</p>
+    <ol>
+        <li>加入视频文件：*.rm、*.rmvb、*.mpeg等</li>
+        <li>属性参数 ClasssID</li>
+        <li>视频参数</li>
+    </ol>
+    <p>编辑网页的头部内容</p>
+    <ol>
+        <li>一个HTML文件，通常由包括<head></head>标记间的头部和包括在<body></body>标记间的正文组成。</li>
+        <li>头部除了标题外，还可以包括很多非常重要的信息。如文档的类型，语言的解码方式、以及引擎的关键字等。</li>
+    </ol>
+    <p>显示与插入头部信息： </p>
+    <ol>
+        <li>View\Head Content(头部信息)命令，显示头部内容</li>
+        <li>Insert\Head Tags(头部标记)包括：<br>
+            a    Meta: 元数据<br>
+            b   Keywords：关键字<br>
+            c    Description：描述<br>
+            d    Refresh：刷新<br>
+            e    Base：基址<br>
+            f     Link ：链接<br>
+        </li>
+    </ol>
+    <p>插入元数据：</p>
+    <ol>
+        <li>&lt;meta&gt;标记是实现元数据的主要标记，它能够提供文档的关键字、描述等多种信息，</li>
+        <li>&lt;meta&gt;标记有如下两种书写方式：&lt;meta name=“元数据属性名称” content=“属性值”&gt;&lt;meta http-equiv=“元数据属性名称” content=“属性值”&gt;</li>
+    </ol>
+    <ul>
+        <li>很多搜索引擎搜索页面时，实际上搜索的是页面里&lt;meta&gt;标记中名为”keywords”(关键字)和”description”(描述)，</li>
+        <li>&lt;meta name=“keywords” content=“合肥信息学院，信息技术，计算机人才"&gt;</li>
+        <li>&lt;meta name="description" content="教育，学校"&gt;</li>
+        <li>这样当其他人利用搜索引擎搜索“合肥，信息技术”等字样时，就很可能找到这个页面，从而增大该页面的访问量</li>
+    </ul>
+    <ul>
+        <li>设置页面的文字解码方式：页面的文字解码方式可通过页面属性来设置</li>
+        <li>&lt;meta http-equiv=“content-Type” content=“text/html”;charset=“gb2312”&gt;</li>
+        <li>&lt;meta http-equiv="Content-Type" content="text/html; charset=gb2312"&gt;</li>
+        <li>&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"&gt;</li>
+        <li>设定这是 HTML 文件及其编码语系，中文网页请使用gb2312 ，或者不设编码亦 可，纯英文网页建议使用 iso-8859-1。</li>
+    </ul>
+    <ul>
+        <li>&lt;meta name=“GENERATOR” content=“Mozilla/4.04 [en] (Win95; I) [Netscape]”&gt;</li>
+        <li>&lt;meta name=“GENERATOR” content=“Microsoft FrontPage 3.0”&gt;</li>
+        <li>这只表示该网页由什么编辑器写成。</li>
+    </ul>
+    <p>让页面定时刷新或定时跳转</p>
+    <ol>
+        <li>&lt;meta http-equiv=“refresh” content=“5”&gt;每隔5秒就会刷新一次。</li>
+        <li>
+            如希望页面经过一段时间跳转另一个地址的页面<br>
+            &lt;meta http-equiv="refresh" content="3;url=http://www.sina.com"&gt;<br>
+            这一行较为实用，能於预定秒数内自动转到指定的网址。原始码中 3 表示 3秒。<br>
+        </li>
+    </ol>
+    <p>在&lt;head&gt;&lt;/head&gt;之间加script脚本</p>
+    <ol>
+        <li>
+            vbscript: <br>
+            &lt;script language="VBScript" type="text/VBScript">msgbox now&lt;/script&gt;<br>
+            Javascript脚本：<br>
+            &lt;script language="JavaScript" type="text/JavaScript"&gt;alert('我不知道为什么会这样');&lt;/script&gt;  <br>        
+        </li>
+    </ol>
+</body>
+</html>

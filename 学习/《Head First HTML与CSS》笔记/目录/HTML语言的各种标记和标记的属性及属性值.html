@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML语言的各种标记和标记的属性及属性值</title>
+    <link type="text/css" rel="stylesheet" href="../样式表.css">
+</head>
+<body>
+  <h2>一、标记的应用</h2>
+    <p><span class="em">基本语法：</span></p>
+    <ol>
+        <li>&lt;marquee&gt; ... &lt;/marquee&gt;例：&lt;marquee&gt;啦啦啦，我会移&lt;/marquee&gt;</li>
+        <li>文字移动属性的设置方向 direction=left, right ，up ，down <br> direction=“LEFT” 设定文字的卷动方向，LEFT 表示向左，是内定值，RIGHT 表示向右。<br>
+            例：&lt;marquee direction=left&gt;啦啦啦，我从右向左移！&lt;/marquee&gt; &lt;P&gt;&lt;marquee direction=right&gt;啦啦啦，我从左向右移！&lt;/marquee&gt;</li>
+    </ol>
+    <p>方式 ：behavior=scroll,slide,alternate behavior=“SCROLL” </p>
+    决定文字的卷动方式，可选值为：<br>
+    <ol>
+        <li>SCROLL 一般卷动，是内定值。</li>
+        <li>SLIDE 如幻灯片，一格格的，效果是文字一接触左边便全部停止。</li>
+        <li>ALTERNATE 文字向左右两边撞来撞去。</li>
+    </ol>
+    <p>例子：</p>
+    &lt;marquee behavior=scroll&gt;啦啦啦，我一圈一圈绕着走！&lt;/marquee&gt; &lt;P&gt;<br>
+    &lt;marquee behavior=slide&gt;啦啦啦，我只走一次就歇了！&lt;/marquee&gt; &lt;P&gt;<br>
+    &lt;marquee behavior=alternate&gt;啦啦啦，我来回走耶！&lt;/marquee&gt; <br><br>
+    速度 scrollamount=# <br>
+    scrollamount="30" 每「格」文字之间的间隔，单位是像素。 <br>
+    例：&lt;marquee scrollamount=20&gt;啦啦啦，我走得好快哟！&lt;/marquee&gt; <br><br>
+    <span class="em">延时 scrolldelay=#</span> <br>
+    scrolldelay=“500” 文字卷动的停顿时间，单位是毫秒。 <br>
+    例：&lt;marquee scrolldelay=500 &gt;啦啦啦，我走一步，停一停！&lt;/marquee&gt; <br>
+    <p>循环 </p> 
+    <p>loop=次数；若未指定则循环不止</p>
+    <p>loop="INFINITE"</p>
+    <p>设定文字卷动次数，其值可以是正整数或 INFINITE，INFINITE 是内定值，表示无 限次。</p>
+    <p>底色 <br> bgcolor=“#0000FF”设定文字卷动范围的背景颜色。 <br> 例：&lt;marquee bgcolor=#aaaaee&gt;啦啦啦，我会移动耶！&lt;/marquee&gt;</p>
+    <p>面积 <br> height="30" width="150" 设定文字卷动范围，可采用相对或绝对，如 30% 或 30 等，单位为像素。 <br> hspace=“0” vspace=“0” 设定文字的水平及垂直空白位置。 <br> 例:&lt;marquee height=40 width=50% bgcolor=#aaeeaa&gt;啦啦啦，我会移动耶！&lt;/marquee&gt;</p>
+    <p>应用所有属性的一个例子： <br> &lt;marquee behavior="SCROLL" direction="LEFT" bgcolor="#0000FF" height="30"  width="150" hspace="0" vspace="0" loop="INFINITE" scrollamount="30"  scrolldelay="500"&gt;Hello&lt;/marquee&gt;</p>
+    <h2>二、表格的建立及基本操作</h2>
+    <p>a.表格：</p>
+    <ol>
+      <li>表格是整个网页的设计精华。它具有输入数据和进行分类列表的功能。</li>
+      <li>利用表格可控制文本和图形在页面上出现的位置，方便地设计出水平或垂直结构。</li>
+    </ol>
+    <p>b.创建表格 </p>
+    &lt;table&gt;&lt;/table&gt; 创建一个表格<br>
+    &lt;tr&gt;&lt;/tr&gt; 表格中的每一行 <br>
+    &lt;td&gt;&lt;/td&gt; 表格中一行中的每一个格子<br> 
+    &lt;th&gt;&lt;/th&gt; 设置表格头:通常是黑体居中文字<br><br>
+
+    &lt;table border=""&gt; 设置边框的宽度<br>
+    &lt;table cellspacing=""&gt; 设置表格格子之间空间的大小 <br>
+    &lt;table cellpadding=""&gt; 设置表格格子边框与其内部内容之间空间的大小 <br>
+    &lt;table width=“”&gt; 设置表格的宽度。用绝对像素值或总宽度的百分比 <br><br>
+
+    &lt;table height=“”&gt; 设置表格的高度。用绝对像素值或总宽度的百分比<br>
+        bgcolor=“#“  设置表格的背景色<br>
+        background=“url” 设置表格的背景图片<br>
+        align=left center right表格页面的对齐<br>
+        valign= top, middle, bottom 单元格内容的对齐<br><br>
+    
+    如何制作一个边框为1的方格？<br>
+    先插入一个1行1列的表格，将表格的“border”、“cellpadding”设置为“0”，“cellspacing”设置为“1”。设定表格的“bgcolor”为红色（即为边框的颜色），同时设定单元格的“bgcolor”为白色（即同背景色），OK了<br>
+    如何制作一个竖线。<br>
+    <p>表格数据的导入与导出：</p>
+    <ol>
+      <li>导入：文件\\导入\表格数据</li>
+      <li>导出：文件\\导出\Table 套用现有表格格式： 1 Commands(命令)\\Format Table(格式化表格)</li>
+    </ol>
+    <p>Javascript的应用</p>
+    &lt;tr onmouseover=this.bgColor="#ff00ff" onmouseout=this.bgColor="#ffff00"&gt;鼠标移上去变色
+
+    <br><br><br>效果：<br>
+    <style>
+            #five{
+              background:white;
+              color:gray;
+              transition-property:all;
+              transition-duration:0.8s;
+            }
+            #five:hover{
+              background:black;
+              color:white;
+              border-radius:10px;
+            }
+    </style>
+    <div id="five"><p id="two" align="center">为什么要进行算法复杂度分析？</p></div>
+    <br>&lt;style&gt;<br>
+            #five{<br>
+              background:white;<br>
+              color:gray;<br>
+              transition-property:all; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 选定该元素要进行过渡的属性为all<br>
+              transition-duration:0.8s; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 指定过渡所需要的时间<br>
+            }<br>
+            #five:hover{<br>
+              background:black;<br>
+              color:white;<br>
+              border-radius:10px; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 弧度 <br>
+            }<br>
+            &lt;/style&gt;<br><br>
+            &lt;div id="five"&gt;&lt;p&gt;为什么要进行算法复杂度分析？&lt;/p&gt;&lt;/div&gt;<br><br>
+</body>
+</html>
